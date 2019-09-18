@@ -1,6 +1,7 @@
 ﻿using System;
 using AutoFixture;
 using NSubstitute;
+using NSubstitute.ExceptionExtensions;
 using NUnit.Framework;
 
 namespace SolidifyLabs.FeatureFlags.UnitTest
@@ -11,16 +12,29 @@ namespace SolidifyLabs.FeatureFlags.UnitTest
         public void When_calling_feature_flag_service_Then_expected_result_is_returned()
         {
             var fixture = new Fixture();
-            
-            var provider = fixture.Freeze<IFeatureFlagProvider>();
+            var provider = Substitute.For<IFeatureFlagProvider>();
             provider.IsEnabled(Arg.Any<string>()).Returns(true);
-            var sut = fixture.Create<IFeatureFlagService>();
+            fixture.Inject(provider);
+            var sut = fixture.Create<FeatureFlagService>();
             var isEnabled = sut.Is<TestFeatureFlag>().Enabled;
 
             Assert.That(isEnabled);
         }
 
+        [Test]
+        public void When_Then()
+        {
+            var fixture = new Fixture();
+            var provider = Substitute.For<IFeatureFlagProvider>();
+            fixture.Inject(provider);
+            provider.IsEnabled(Arg.Any<string>()).Throws(new Exception("Boooom"));
 
+            var sut = fixture.Create<FeatureFlagService>();
+
+            var isEnabled = sut.Is<TestFeatureFlag>().Enabled;
+
+            Assert.That(isEnabled, Is.False);
+        }
 
         public class TestFeatureFlag : FeatureFlag
         {

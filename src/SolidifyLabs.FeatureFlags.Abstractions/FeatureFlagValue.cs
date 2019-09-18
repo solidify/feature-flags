@@ -2,13 +2,12 @@
 {
     public class FeatureFlagValue<T> where T : FeatureFlag, new()
     {
-        private readonly IFeatureFlagProvider _provider;
 
-        public FeatureFlagValue(IFeatureFlagProvider provider)
+        public FeatureFlagValue(bool enabled)
         {
-            _provider = provider;
+            Enabled = enabled;
         }
 
-        public bool Enabled => _provider.IsEnabled(new T().Key);
+        public bool Enabled { get; }
     }
 }

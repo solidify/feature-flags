@@ -10,11 +10,29 @@ namespace SolidifyLabs.FeatureFlags.Demo.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public class MyFlag : FeatureFlag
+        {
+            public override string Key => "My_Flag";
+        }
+        private readonly IFeatureFlagService _featureFlagService;
+
+        public ValuesController(IFeatureFlagService featureFlagService)
+        {
+            _featureFlagService = featureFlagService;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            if (_featureFlagService.Is<MyFlag>().Enabled)
+            {
+                return new string[] {"wow", "such feature"};
+            }
+            else
+            {
+                return new string[] { "value1", "value2" };
+
+            }
         }
 
         // GET api/values/5

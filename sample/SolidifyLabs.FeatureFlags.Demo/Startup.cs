@@ -25,7 +25,11 @@ namespace SolidifyLabs.FeatureFlags.Demo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.Configure<Dictionary<string, bool>>(Configuration.GetSection("FeatureFlags"));
+            services.AddSingleton<IFeatureFlagProvider, ConfigFileProvider.ConfigFileFeatureFlagProvider>();
+            services.AddSingleton<IFeatureFlagService, FeatureFlagService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
