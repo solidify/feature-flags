@@ -8,7 +8,7 @@ namespace SolidifyLabs.FeatureFlags.ConfigFileProvider
         {
         }
 
-        public bool IsEnabled(bool featureFlagKey)
+        public bool IsEnabled(string featureFlagKey)
         {
             throw new NotImplementedException();
         }

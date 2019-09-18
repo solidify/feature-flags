@@ -8,11 +8,18 @@ namespace SolidifyLabs.FeatureFlags.UnitTest
     public class FeatureFlagProvider_Test
     {
         [Test]
-        public void When_foo()
+        public void When_creating_a_provider_Then()
         {
             var fixture = new Fixture();
 
-            
+            var provider = new TestProvider();
+
+
+        }
+
+
+        public class TestProvider : IFeatureFlagProvider
+        {
 
         }
     }

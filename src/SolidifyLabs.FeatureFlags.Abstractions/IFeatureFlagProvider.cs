@@ -2,6 +2,6 @@
 {
     public interface IFeatureFlagProvider
     {
-        bool IsEnabled(bool featureFlagKey);
+        bool IsEnabled(string featureFlagKey);
     }
 }
