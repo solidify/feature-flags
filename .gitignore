@@ -328,3 +328,27 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+*.rsuser
+# Mono auto generated files
+mono_crash.*
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+*_h.h
+*_wpftmp.csproj
+*.appxbundle
+*.appxupload
+!?*.[Cc]ache/
+# Including strong name files can present a security risk
+# ASP.NET Core default setup: bower directory is configured as wwwroot/lib/ and bower restore is true
+**/wwwroot/lib/
+*- Backup*.rdl
+# CodeRush personal settings
+.cr/personal
+# Azure Stream Analytics local run output
+# MFractors (Xamarin productivity tool) working folder
+# Local History for Visual Studio
+.localhistory/
+# BeatPulse healthcheck temp database
+healthchecksdb
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
