@@ -33,15 +33,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      dir /b /s
-      
-      echo Hello world
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: './src/SolidifyLabs.FeatureFlags.Abstractions/bin/Release/'
