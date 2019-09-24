@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>SolidifyLabs.FeatureFlags.ConfigFileProvider</PackageId>
+    <Company>Solidify AB</Company>
+    <Product>SolidifyLabs.FeatureFlags.ConfigFileProvider</Product>
+    <Version>1.0.0</Version>
+    <Description>Config file feature flag provider.</Description>
+    <Authors>Solidify Labs</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/solidify/feature-flags</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/solidify/feature-flags</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageIconUrl>https://raw.githubusercontent.com/solidify/feature-flags/master/icon.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
