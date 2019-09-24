@@ -38,3 +38,9 @@ steps:
     PathtoPublish: './src/SolidifyLabs.FeatureFlags.Abstractions/bin/Release/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: './src/SolidifyLabs.FeatureFlags.ConfigFileProvider/bin/Release/'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
