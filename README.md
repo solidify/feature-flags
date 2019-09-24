@@ -32,7 +32,7 @@ appsettings.json:
 ```
 Note that the sections name must be the same as the one provided in Startup.cs
 
-### Add a class for the feature flag provider
+### Add a class for the feature flag
 Add a new class that extends FeatureFlag.cs
 ```csharp
 public class FFReturnNewValues : FeatureFlag
