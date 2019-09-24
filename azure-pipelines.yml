@@ -38,7 +38,7 @@ steps:
     script: |
       echo Write your commands here
       
-      dir /b /a-d
+      dir /b /s
       
       echo Hello world
 
