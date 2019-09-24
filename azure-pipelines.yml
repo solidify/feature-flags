@@ -44,6 +44,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: './src/SolidifyLabs.FeatureFlags.Abstractions/bin/Release/*.nupkg'
+    PathtoPublish: './src/SolidifyLabs.FeatureFlags.Abstractions/bin/Release/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
