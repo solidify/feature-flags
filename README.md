@@ -1,5 +1,5 @@
 # feature-flags
-[![Build status](https://ci.appveyor.com/api/projects/status/l8bm6mcxhgvu5046/branch/master?svg=true)](https://ci.appveyor.com/project/HoudiniCollector/common-restclient/branch/master)
+[![Build Status](https://dev.azure.com/solidify/OSS/_apis/build/status/solidify.feature-flags?branchName=master)](https://dev.azure.com/solidify/OSS/_build/latest?definitionId=68&branchName=master)
 
 # Solidify Feature Flags
 
