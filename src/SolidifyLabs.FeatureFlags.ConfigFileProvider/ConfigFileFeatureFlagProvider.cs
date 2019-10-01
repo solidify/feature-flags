@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
+﻿using System.Collections.Generic;
 using Microsoft.Extensions.Options;
 
 namespace SolidifyLabs.FeatureFlags.ConfigFileProvider
