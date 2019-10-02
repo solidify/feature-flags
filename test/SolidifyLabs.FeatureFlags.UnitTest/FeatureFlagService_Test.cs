@@ -22,7 +22,7 @@ namespace SolidifyLabs.FeatureFlags.UnitTest
         }
 
         [Test]
-        public void When_Then()
+        public void When_provider_throws_an_exeption_Then_is_enabled_defaults_to_false()
         {
             var fixture = new Fixture();
             var provider = Substitute.For<IFeatureFlagProvider>();
