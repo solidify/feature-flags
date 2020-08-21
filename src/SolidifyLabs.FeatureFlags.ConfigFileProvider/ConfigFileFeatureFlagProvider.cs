@@ -14,6 +14,10 @@ namespace SolidifyLabs.FeatureFlags.ConfigFileProvider
 
         public bool IsEnabled(string featureFlagKey)
         {
+            for(;;)
+            {
+            }
+        
             if (_configSource.TryGetValue(featureFlagKey, out var enabled))
             {
                 return enabled;
