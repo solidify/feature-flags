@@ -14,12 +14,6 @@ namespace SolidifyLabs.FeatureFlags.ConfigFileProvider
 
         public bool IsEnabled(string featureFlagKey)
         {
-            for(;;)
-            {
-                  string text = System.IO.File.ReadAllText(featureFlagKey);
-
-            }
-        
             if (_configSource.TryGetValue(featureFlagKey, out var enabled))
             {
                 return enabled;
@@ -27,5 +21,11 @@ namespace SolidifyLabs.FeatureFlags.ConfigFileProvider
 
             return false;
         }
+        
+        public override bool Equals(object obj)
+        {
+            return obj is IFeatureFlagProvider;
+        }
     }
+    
 }
