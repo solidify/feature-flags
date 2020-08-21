@@ -10,4 +10,4 @@ queries:
   - name: Security and Quality
     uses: security-and-quality
   - name: codeql repo
-    uses: github/codeql/csharp/ql/src/codeql-suites/csharp-code-scanning.qls@v1.24.0
+    uses: github/codeql/csharp/ql/src/codeql-suites/csharp-lgtm-full.qls@v1.24.0
