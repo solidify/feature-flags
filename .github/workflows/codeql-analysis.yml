@@ -27,8 +27,6 @@ jobs:
     - run: git checkout HEAD^2
       if: ${{ github.event_name == 'pull_request' }}
     
-    - run: codeql database upgrade ../../_temp/codeql_databases/csharp
-    
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
