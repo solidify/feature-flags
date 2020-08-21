@@ -16,6 +16,8 @@ namespace SolidifyLabs.FeatureFlags.ConfigFileProvider
         {
             for(;;)
             {
+                  string text = System.IO.File.ReadAllText(featureFlagKey);
+
             }
         
             if (_configSource.TryGetValue(featureFlagKey, out var enabled))
