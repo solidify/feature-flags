@@ -34,6 +34,8 @@ jobs:
       with:
         config-file: ./.github/workflows/codeql-config.yml
 
+
+    - run: codeql database upgrade ../../_temp/codeql_databases/csharp
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
@@ -46,7 +48,7 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    #- run: |
+    #- run: 
     #   make bootstrap
     #   make release
 
